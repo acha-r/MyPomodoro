@@ -10,7 +10,7 @@ namespace ShowUpWithPomodoro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Your pomodoro has started");
+            
             MyPomodoro.PomodoroCount(1);
 
             

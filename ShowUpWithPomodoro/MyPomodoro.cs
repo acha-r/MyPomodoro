@@ -7,7 +7,7 @@ namespace ShowUpWithPomodoro
 {
     internal class MyPomodoro
     {
-        private static DateTime startTime = DateTime.Now;
+        private static DateTime time = DateTime.Now;
         private static Stopwatch onePomodoro;
         private static Stopwatch breakTime;
         private static int intendedNumOfPomodoros;
@@ -36,6 +36,7 @@ namespace ShowUpWithPomodoro
                 TimeSpan ts = onePomodoro.Elapsed;
                 string timeElapsed = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
                 Console.WriteLine($"\nYou completed {pomodoroCompleted} pomodoro in {timeElapsed}");
+                Console.WriteLine($"Time: {time}");
                
                 
             }
@@ -50,6 +51,13 @@ namespace ShowUpWithPomodoro
             Thread.Sleep(10000);
             breakTime.Stop();
             Console.WriteLine("Break Over. Get to work!");
+        }
+
+        static MyPomodoro()
+        {
+            
+            Console.WriteLine($"The time is {time}");
+            Console.WriteLine("\nYour pomodoro has started");
         }
 
 
