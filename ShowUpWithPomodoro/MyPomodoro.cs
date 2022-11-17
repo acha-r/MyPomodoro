@@ -23,7 +23,7 @@ namespace ShowUpWithPomodoro
                 intendedNumOfPomodoros = pomCount;
                 onePomodoro = new Stopwatch();
                 onePomodoro.Start();
-                Thread.Sleep(10000); //30 seconds
+                Thread.Sleep(30000); //30 seconds
                 onePomodoro.Stop();
                 pomodoroCompleted++;
                 if (i < pomCount)
